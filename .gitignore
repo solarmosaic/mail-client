@@ -1,0 +1,15 @@
+.*
+*.lck
+*.log
+*.epoch
+*.iml
+*.orig
+*.iws
+*.ids
+*.ipr
+*.ser
+*.*~
+!.editorconfig
+!.gitignore
+!.sbtopts
+target
