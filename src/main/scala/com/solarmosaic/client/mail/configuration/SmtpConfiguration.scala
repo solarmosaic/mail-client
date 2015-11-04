@@ -1,6 +1,7 @@
 package com.solarmosaic.client.mail.configuration
 
 import java.util.Properties
+import javax.mail.Authenticator
 
 /**
  * JavaMail API configuration for SMTP.
@@ -15,7 +16,8 @@ case class SmtpConfiguration(
   host: String,
   port: Int,
   tls: Boolean = false,
-  debug: Boolean = false
+  debug: Boolean = false,
+  authenticator: Option[Authenticator] = None
 ) {
   /** The [[Properties]] representation of the configuration. */
   val properties: Properties = {
@@ -24,11 +26,8 @@ case class SmtpConfiguration(
     props.put("mail.debug", debug.toString)
     props.put("mail.smtp.host", host)
     props.put("mail.smtp.port", port.toString)
-
-    if (tls) {
-      props.put("mail.smtp.starttls.enable", "true")
-      props.put("mail.smtp.auth", "true")
-    }
+    props.put("mail.smtp.starttls.enable", tls.toString)
+    props.put("mail.smtp.auth", authenticator.isDefined.toString)
 
     props
   }
