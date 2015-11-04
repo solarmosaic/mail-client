@@ -17,6 +17,11 @@ This repository is a mirror of our internal [Gerrit](https://www.gerritcoderevie
 support merging code through Github itself. Please feel free to create issues or open pull requests here and we will do
 our best to resolve them internally.
 
+## Inspiration
+
+This library was inspired by [courier](https://github.com/softprops/courier) and
+[scala-mail](https://github.com/pascalmouret/scala-mail).
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
