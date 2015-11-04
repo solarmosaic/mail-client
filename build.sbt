@@ -28,14 +28,13 @@ val commonSettings = Seq(
   publishMavenStyle := true,
   publishTo := {
     Some("MosaicArtifactory" at "http://art.intranet.solarmosaic.com/artifactory/internal")
-    //      val nexus = "https://oss.sonatype.org/"
-    //      if (isSnapshot.value)
-    //        Some("snapshots" at nexus + "content/repositories/snapshots")
-    //      else
-    //        Some("releases" at nexus + "service/local/staging/deploy/maven2")
+//    val nexus = "https://oss.sonatype.org/"
+//    if (isSnapshot.value)
+//      Some("snapshots" at nexus + "content/repositories/snapshots")
+//    else
+//      Some("releases" at nexus + "service/local/staging/deploy/maven2")
   },
-  resolvers := Seq("Artifactory" at "http://art.intranet.solarmosaic.com/artifactory/repo"),
-  //resolvers := Seq("scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"),
+  resolvers := Seq("scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"),
   sbtVersion := "0.13.9",
   scalaVersion := ProjectSettings.version.scala211,
   scmInfo := Some(ScmInfo(
