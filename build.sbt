@@ -17,7 +17,7 @@ val commonSettings = Seq(
   homepage := Some(url("https://github.com/solarmosaic/mail-client")),
   javacOptions ++= Seq("-source", "1.8", "-target", "1.8", "-Xlint"),
   licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT")),
-  organization := "com.solarmosaic.client." + ProjectSettings.projectRootName,
+  organization := "com.solarmosaic.client",
   organizationHomepage := Some(url("https://github.com/solarmosaic")),
   packageOptions in (Compile, packageBin) += Package.ManifestAttributes(
     new java.util.jar.Attributes.Name("BuildDate") -> new java.util.Date().toString
